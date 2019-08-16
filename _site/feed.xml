@@ -1,4 +1,869 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-16T12:36:23+08:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Bananas</title><link href="http://localhost:4000/2019/08/09/bananas.html" rel="alternate" type="text/html" title="Bananas" /><published>2019-08-09T00:00:00+08:00</published><updated>2019-08-09T00:00:00+08:00</updated><id>http://localhost:4000/2019/08/09/bananas</id><content type="html" xml:base="http://localhost:4000/2019/08/09/bananas.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-16T20:56:10+08:00</updated><id>http://localhost:4000/feed.xml</id><entry><title type="html">Jeyll_step_by_step_tutorial</title><link href="http://localhost:4000/2019/08/16/Jeyll_step_by_step_tutorial.html" rel="alternate" type="text/html" title="Jeyll_step_by_step_tutorial" /><published>2019-08-16T00:00:00+08:00</published><updated>2019-08-16T00:00:00+08:00</updated><id>http://localhost:4000/2019/08/16/Jeyll_step_by_step_tutorial</id><content type="html" xml:base="http://localhost:4000/2019/08/16/Jeyll_step_by_step_tutorial.html">&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-创建-git-仓库&quot;&gt;1. 创建 Git 仓库&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/images/start_a_project.png&quot; alt=&quot;Start a project&quot; title=&quot;Start a project&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/create_new_repository.png&quot; alt=&quot;Create a new repository&quot; title=&quot;Create a new repository&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-创建本地仓库&quot;&gt;2. 创建本地仓库&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;打开 Git Bash
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ git clone git@github.com:&amp;lt;your-git-username&amp;gt;/Jekyll-demo.git
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/images/clone_repository.png&quot; alt=&quot;Create local repository&quot; title=&quot;Create local repository&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-安装&quot;&gt;3. 安装&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;安装Ruby (此处提供windows安装)&lt;/li&gt;
+  &lt;li&gt;创建 Gemfile
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle init
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/images/bundle_init.png&quot; alt=&quot;Create Gemfile&quot; title=&quot;Create Gemfile&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;编辑 Gemfile
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Gemfile文末追加 gem &quot;jekyll&quot;
+$ echo &quot;gem \&quot;jekyll\&quot;&quot; &amp;gt;&amp;gt; Gemfile
+# 为你的项目安装jekyll, 会生成Gemfile.lock文件，里面包含了一些库的版本信息
+$ bundle
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/images/gemfile.png&quot; alt=&quot;Show Gemfile&quot; title=&quot;Show Gemfile&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;&lt;em&gt;后面的命令以bundle exec开头，确保使用Gemfile.lock 里定义的jekyll版本&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;4-创建网站&quot;&gt;4. 创建网站&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;创建 index.html 文件
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Home&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;Hello World!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;5-编译&quot;&gt;5. 编译&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;编译网站，自动创建_site目录，包含静态网站内容
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll build
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/images/bundle_exec_jekyll_build.png&quot; alt=&quot;build&quot; title=&quot;build&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;本地运行, 浏览器查看效果 http://localhost:4000
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;&lt;img src=&quot;/assets/images/bundle_exec_jekyll_serve.png&quot; alt=&quot;execute&quot; title=&quot;execute&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;liquid&quot;&gt;Liquid&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-介绍&quot;&gt;1. 介绍&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Liquid 是一门开源的模版语言，包括三个主要部分：对象（objects）, 标记（tags）和过滤器（filters）。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;2-对象objects&quot;&gt;2. 对象（Objects）&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;告诉 Liquid 在哪输出内容，由双花括号标识：{{ 和 }}。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如：
+{{ page.title }}
+页面输出 page.title 的内容&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;3-标记tags&quot;&gt;3. 标记（Tags）&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;创建模版的逻辑和控制流，由单括号+百分号标识： {&lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt; 和 &lt;code class=&quot;highlighter-rouge&quot;&gt;%&lt;/code&gt;}。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如：(&lt;em&gt;去掉 { % 之间的空格&lt;/em&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	{ % if page.show_sidebar % }
+	&amp;lt;div class=&quot;sidebar&quot;&amp;gt;
+		sidebar content
+	&amp;lt;/div&amp;gt;
+	{ % endif % }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如果条件page.show_sidebar为true,输出条件语句之间的内容。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;4-过滤器filters&quot;&gt;4. 过滤器（filters）&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;table&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;改变Liquid对象的输出格式，由&lt;/td&gt;
+        &lt;td&gt;符号分割。&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;如：(&lt;em&gt;去掉大括号之间的空格&lt;/em&gt;)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	{ { &quot;hi&quot; | capitalize } }
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;页面输出 Hi&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;更多详细内容查看 &lt;a href=&quot;https://jekyllrb.com/docs/liquid/filters/&quot;&gt;Liquid filters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;或参考中文网站&lt;a href=&quot;https://liquid.bootcss.com/&quot;&gt;Liquid filters&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h3 id=&quot;5-上手操作&quot;&gt;5. 上手操作&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;修改index.html里的内容，刷新看结果&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Jekll识别Liquid需要在文件顶部加上front matter, 三短线标识&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	…
+	&amp;lt;h1&amp;gt;{ { &quot;Hello World!&quot; | downcase } }&amp;lt;/h1&amp;gt;
+	…
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;front-matter&quot;&gt;Front Matter&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-front-matter-是yaml语言的一个片段包含在两行三短划线之间&quot;&gt;1. Front matter 是YAML语言的一个片段，包含在两行三短划线之间。&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	---
+	my_number: 5 
+	---
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-上手操作&quot;&gt;2. 上手操作&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;修改index.html&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;	---
+	title: Home
+	---
+	&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+	  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+	    &lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	    &lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Jeyll_step_by_step_tutorial&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+	  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+	  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+	    &lt;span class=&quot;nt&quot;&gt;&amp;lt;h1&amp;gt;&lt;/span&gt;hello world!&lt;span class=&quot;nt&quot;&gt;&amp;lt;/h1&amp;gt;&lt;/span&gt;
+	  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;layouts&quot;&gt;Layouts&lt;/h2&gt;
+
+&lt;p&gt;Jekyll 同时支持 Markdown 文件&lt;/p&gt;
+
+&lt;h3 id=&quot;1-在根路径下创建-aboutmd-文件&quot;&gt;1. 在根路径下创建 about.md 文件&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ echo &quot;&quot; &amp;gt;&amp;gt; about.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-创建-layout&quot;&gt;2. 创建 layout&lt;/h3&gt;
+
+&lt;p&gt;Layouts模版 放置在 _layouts目录下&lt;/p&gt;
+
+&lt;p&gt;创建_layouts/default.html(&lt;em&gt;去掉大括号之间的空格&lt;/em&gt;)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{ { page.title } }&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+	{ { content } }
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir _layouts
+$ vim _layouts/default.html 
+# 复制上面内容到default.html
+# 在index.html里使用default layout
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/hello_world.png&quot; alt=&quot;hello_world&quot; title=&quot;hello_world&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-复制下面内容到aboutmd&quot;&gt;3. 复制下面内容到about.md&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim about.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: default
+title: About
+---
+# About page
+
+This page tells you a little bit about me.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;访问 http://localhost:4000/about.html&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/about_page.png&quot; alt=&quot;about_page&quot; title=&quot;about_page&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tips&quot;&gt;Tips:&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;页面使用_layout里定义的模版，网页内容通过Front Matter的方式嵌入到模版的{{ content }} 之中。&lt;/li&gt;
+    &lt;li&gt;Markdown文件可替换html文件。&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;includes&quot;&gt;Includes&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-介绍-1&quot;&gt;1. 介绍&lt;/h3&gt;
+
+&lt;p&gt;之前建立了2个网站，需要导航，这里引入 include 标签.&lt;/p&gt;
+
+&lt;p&gt;include 的作用是从_includes目录下的文件中引入其内容&lt;/p&gt;
+
+&lt;h3 id=&quot;2-上手操作-1&quot;&gt;2. 上手操作&lt;/h3&gt;
+&lt;p&gt;创建导航文件 _includes/navigation.html&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir _includes
+$ vim _includes/navigation.html
+&amp;lt;nav&amp;gt;
+  &amp;lt;a href=&quot;/&quot;&amp;gt;Home&amp;lt;/a&amp;gt;
+  &amp;lt;a href=&quot;/about.html&quot;&amp;gt;About&amp;lt;/a&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;将导航文件引入到&lt;code class=&quot;highlighter-rouge&quot;&gt;_layouts/default.html&lt;/code&gt;模版文件中(&lt;em&gt;去掉大括号之间的空格&lt;/em&gt;)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _layouts/default.html
+&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Jeyll_step_by_step_tutorial&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+	{ % include navigation.html %}
+	{ { content }}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;访问 http://localhost:4000&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/include_navigation.png&quot; alt=&quot;include_navigation&quot; title=&quot;include_navigation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/include_navigation2.png&quot; alt=&quot;include_navigation2&quot; title=&quot;include_navigation2&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;3-高亮当前页面&quot;&gt;3. 高亮当前页面&lt;/h3&gt;
+
+&lt;p&gt;page.url 是当前页面的相对路径&lt;/p&gt;
+
+&lt;p&gt;修改导航文件 navigation.html (&lt;em&gt;去掉{ %之间的空格&lt;/em&gt;)&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _includes/navigation.html
+&amp;lt;nav&amp;gt;
+  &amp;lt;a href=&quot;/&quot; { % if page.url == &quot;/&quot; %}style=&quot;color: red;&quot;{ % endif %}&amp;gt;
+	Home
+  &amp;lt;/a&amp;gt;
+  &amp;lt;a href=&quot;/about.html&quot; { % if page.url == &quot;/about.html&quot; %}style=&quot;color: red;&quot;{ % endif %}&amp;gt;
+	About
+  &amp;lt;/a&amp;gt;
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/highlight.png&quot; alt=&quot;highlight&quot; title=&quot;highlight&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;data-files&quot;&gt;Data Files&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-介绍-2&quot;&gt;1. 介绍&lt;/h3&gt;
+&lt;p&gt;Jekyll支持从_data目录下的YAML, JSON, CSV文件里加载数据&lt;/p&gt;
+
+&lt;h3 id=&quot;2-上手操作-2&quot;&gt;2. 上手操作&lt;/h3&gt;
+&lt;p&gt;这里使用YAML 文件来存储导航内容（包含name 和 link）&lt;/p&gt;
+
+&lt;p&gt;在_data目录下创建数据文件 navigation.yml&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir _data
+$ vim _data/navigation.yml
+- name: GoToHome
+  link: /
+- name: GoToAbout
+  link: /about.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;通过 site.data.navigation 存储导航内容，通过变量指代的方式引用其数据。(&lt;em&gt;去掉{ %之间的空格&lt;/em&gt;)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _includes/navigation.html
+&amp;lt;nav&amp;gt;
+  { % for item in site.data.navigation %}
+	&amp;lt;a href=&quot;{ { item.link }}&quot; { % if page.url == item.link %}style=&quot;color: red;&quot;{ % endif %}&amp;gt;
+	  { { item.name }}
+	&amp;lt;/a&amp;gt;
+  { % endfor %}
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/navigation_template.png&quot; alt=&quot;navigation_template&quot; title=&quot;navigation_template&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tips-1&quot;&gt;Tips:&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;_includes/navigation.html&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;只需要写导航的逻辑结构，其内容写在_data/navigation.yml中并存储在集合site.data.&lt;name_of_yml&gt;里，通过变量引用集合里的值。&lt;/name_of_yml&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;assets&quot;&gt;Assets&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-介绍-3&quot;&gt;1. 介绍&lt;/h3&gt;
+&lt;p&gt;assets目录存放CSS，JS, images等网站资源&lt;/p&gt;
+
+&lt;h3 id=&quot;2-上手操作-3&quot;&gt;2. 上手操作&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir assets
+$ cd assets
+$ mkdir css
+$ mkdir images
+$ mkdir js
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;查看目录结构，Git Bash使用cmd的 tree命令,  tree /F 显示文件夹及其文件&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ cmd //c tree //F
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/cmd_c_tree_f.png&quot; alt=&quot;cmd_c_tree_f&quot; title=&quot;cmd_c_tree_f&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;使用 Sass 来显示样式&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _includes/navigation.html
+&amp;lt;nav&amp;gt;
+  { % for item in site.data.navigation %}
+	&amp;lt;a href=&quot;{ { item.link }}&quot; { % if page.url == item.link %}class=&quot;current&quot;{ % endif %}&amp;gt;{ { item.name }}&amp;lt;/a&amp;gt;
+  { % endfor %}
+&amp;lt;/nav&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在目录/assets/css/下创建Sass文件 styles.scss&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt; vim assets/css/styles.scss
+&lt;span class=&quot;p&quot;&gt;---
+---
+&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@import&lt;/span&gt; &quot;main&quot;;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;import “main”指导入根路径下的_sass/ 目录下的main.scss文件&lt;/p&gt;
+
+&lt;p&gt;创建main.scss文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir _sass
+$ vim _sass/main.scss
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;.current {
+  color: green;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;在模版的&amp;lt;head&amp;gt;里引入样式表&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _layouts/default.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{ { page.title }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/css/styles.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+	{ % include navigation.html %}
+	{ { content }}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;刷新 http://localhost:4000 查看效果&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/styles_show.png&quot; alt=&quot;styles_show&quot; title=&quot;styles_show&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tips-2&quot;&gt;Tips:&lt;/h3&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;_sass/目录下存css内容&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;assets/css/目录下 @import css内容&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;模版&amp;lt;head&amp;gt;通过&lt;link /&gt; 呈现样式&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1. _layouts模版&amp;lt;head&amp;gt;里引入样式表stylesheet, &amp;lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/css/&amp;lt;filename&amp;gt;.scss&quot;&amp;gt;
+2. 样式表放在assets/css/目录下styles.scss
+3. css内容在_sass/目录下main.scss，并通过@import “&amp;lt;scss_file_name&amp;gt;” 导入到styles.scss里
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;blogging&quot;&gt;Blogging&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-介绍-4&quot;&gt;1. 介绍&lt;/h3&gt;
+
+&lt;p&gt;博客只由text文件驱动。&lt;/p&gt;
+
+&lt;p&gt;存放在_posts/目录下&lt;/p&gt;
+
+&lt;p&gt;博客文件命名规则：&lt;code class=&quot;highlighter-rouge&quot;&gt;yyyy-mm-dd-&amp;lt;title&amp;gt;.md&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;2-上手操作-4&quot;&gt;2. 上手操作&lt;/h3&gt;
+
+&lt;p&gt;在_posts/目录下创建帖子&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir _posts
+$ vim _posts/2019-08-09-bananas.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+author: jill
+---
+A banana is an edible fruit – botanically a berry – produced by several kinds
+of large herbaceous flowering plants in the genus Musa.
+
+In some countries, bananas used for cooking may be called &quot;plantains&quot;,
+distinguishing them from dessert bananas. The fruit is variable in size, color,
+and firmness, but is usually elongated and curved, with soft flesh rich in
+starch covered with a rind, which may be green, yellow, red, purple, or brown
+when ripe.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;md文件需要有front matter ，layout 及其他非必须变量（title, author）&lt;/p&gt;
+
+&lt;p&gt;创建对应的layout: post&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _layouts/post.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: default
+---
+&amp;lt;h1&amp;gt;{ { page.title }}&amp;lt;/h1&amp;gt;
+&amp;lt;p&amp;gt;{ { page.date | date_to_string }} - { { page.author }}&amp;lt;/p&amp;gt;
+
+{ { content }}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;这里的{ { content }}指代调用该模版的文件的内容，这里指博客帖子的内容&lt;/p&gt;
+
+&lt;p&gt;page 可能指代全局变量&lt;/p&gt;
+
+&lt;p&gt;site.posts 存储post文件&lt;/p&gt;
+
+&lt;p&gt;创建blog.html 主页面&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim blog.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: default
+title: Blog
+---
+&amp;lt;h1&amp;gt;Latest Posts&amp;lt;/h1&amp;gt;
+
+&amp;lt;ul&amp;gt;
+  { % for post in site.posts %}
+	&amp;lt;li&amp;gt;
+	  &amp;lt;h2&amp;gt;&amp;lt;a href=&quot;{ { post.url }}&quot;&amp;gt;{ { post.title }}&amp;lt;/a&amp;gt;&amp;lt;/h2&amp;gt;
+	  &amp;lt;p&amp;gt;{ { post.excerpt }}&amp;lt;/p&amp;gt;
+	&amp;lt;/li&amp;gt;
+  { % endfor %}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;post.excerpt 指代default 的第一段内容&lt;/p&gt;
+
+&lt;p&gt;在导航数据里加上Blog导航栏&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _data/navigation.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- name: Home
+  link: /
+- name: About
+  link: /about.html
+- name: Blog
+  link: /blog.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;多创建几个post&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _posts/2018-08-20-apples.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+author: jill
+---
+An apple is a sweet, edible fruit produced by an apple tree.
+
+Apple trees are cultivated worldwide, and are the most widely grown species in
+the genus Malus. The tree originated in Central Asia, where its wild ancestor,
+Malus sieversii, is still found today. Apples have been grown for thousands of
+years in Asia and Europe, and were brought to North America by European
+colonists.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _posts/2019-07-21-kiwifruit.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: post
+author: ted
+---
+Kiwifruit (often abbreviated as kiwi), or Chinese gooseberry is the edible
+berry of several species of woody vines in the genus Actinidia.
+
+The most common cultivar group of kiwifruit is oval, about the size of a large
+hen's egg (5–8 cm (2.0–3.1 in) in length and 4.5–5.5 cm (1.8–2.2 in) in
+diameter). It has a fibrous, dull greenish-brown skin and bright green or
+golden flesh with rows of tiny, black, edible seeds. The fruit has a soft
+texture, with a sweet and unique flavor.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;刷新页面查看效果&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/posts.png&quot; alt=&quot;posts&quot; title=&quot;posts&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tips-3&quot;&gt;Tips:&lt;/h3&gt;
+&lt;blockquote&gt;
+  &lt;ol&gt;
+    &lt;li&gt;layout: &lt;layout_file_name&gt; 冒号和文件名之间必须要有个空格，否则不生效&lt;/layout_file_name&gt;&lt;/li&gt;
+    &lt;li&gt;文章的内容编码要是UTF-8格式，否则报invalid byte sequence in UTF-8&lt;/li&gt;
+    &lt;li&gt;由于之前Git Bash中文乱码问题，设置Git Bash为GBK格式，所以复制内容时-的格式不正确。&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;collections&quot;&gt;Collections&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-介绍-5&quot;&gt;1. 介绍&lt;/h3&gt;
+
+&lt;p&gt;Collections 跟post类似，不需要按时间排序，充实作者，使其拥有自己的简介和博文。&lt;/p&gt;
+
+&lt;h3 id=&quot;2-上手操作-5&quot;&gt;2. 上手操作&lt;/h3&gt;
+
+&lt;p&gt;Jekyll的配置文件默认为_config.yml文件&lt;/p&gt;
+
+&lt;p&gt;根目录下创建_config.yml配置文件&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _config.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;collections:
+  authors:
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;该配置需要重启jekyll server&lt;/p&gt;
+
+&lt;p&gt;Ctrl+C终止服务，并重启&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;文档（collection的元素）存在根路径下的&lt;code class=&quot;highlighter-rouge&quot;&gt;_&amp;lt;collecion_name&amp;gt;&lt;/code&gt;文件夹中，这里为_authors&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ mkdir _authors
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;为每个作者创建一个文档&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _authors/jill.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+short_name: jill
+name: Jill Smith
+position: Chief Editor
+---
+Jill is an avid fruit grower based in the south of France.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _authors/ted.md
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+short_name: ted
+name: Ted Doe
+position: Writer
+---
+Ted has been eating fruit since he was baby.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;创建模版列举作者信息, 作者信息包含在 site.authors集合里&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim staff.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: default
+title: Staff
+---
+&amp;lt;h1&amp;gt;Staff&amp;lt;/h1&amp;gt;
+
+&amp;lt;ul&amp;gt;
+  { % for author in site.authors %}
+	&amp;lt;li&amp;gt;
+	  &amp;lt;h2&amp;gt;{ { author.name }}&amp;lt;/h2&amp;gt;
+	  &amp;lt;h3&amp;gt;{ { author.position }}&amp;lt;/h3&amp;gt;
+	  &amp;lt;p&amp;gt;{ { author.content | markdownify }}&amp;lt;/p&amp;gt;
+	&amp;lt;/li&amp;gt;
+  { % endfor %}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;通过markdownify过滤器来执行当前内容，并自动在包含{ { content }}的layout中输出&lt;/p&gt;
+
+&lt;p&gt;导航数据中加入 staff&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _data/navigation.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;- name: Home
+  link: /
+- name: About
+  link: /about.html
+- name: Blog
+  link: /blog.html
+- name: Staff
+  link: /staff.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;每个作者拥有自己的网页, 默认不自动输出&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _config.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;collections:
+  authors:
+	output: true 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim staff.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: default
+---
+&amp;lt;h1&amp;gt;Staff&amp;lt;/h1&amp;gt;
+
+&amp;lt;ul&amp;gt;
+  { % for author in site.authors %}
+	&amp;lt;li&amp;gt;
+	  &amp;lt;h2&amp;gt;&amp;lt;a href=&quot;{ { author.url }}&quot;&amp;gt;{ { author.name }}&amp;lt;/a&amp;gt;&amp;lt;/h2&amp;gt;
+	  &amp;lt;h3&amp;gt;{ { author.position }}&amp;lt;/h3&amp;gt;
+	  &amp;lt;p&amp;gt;{ { author.content | markdownify }}&amp;lt;/p&amp;gt;
+	&amp;lt;/li&amp;gt;
+  { % endfor %}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;创建作者模版&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _layouts/author.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: default
+---
+&amp;lt;h1&amp;gt;{ { page.name }}&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;{ { page.position }}&amp;lt;/h2&amp;gt;
+
+{ { content }}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;让作者文档使用layouts&lt;/p&gt;
+
+&lt;p&gt;配置 front matter defaults, 指定对应的集合用对应的layout, 默认的使用default&lt;/p&gt;
+
+&lt;p&gt;type 表示的是集合， layout 表示对应的layout页面，其他front matter 里的layouts可以注释掉。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _config.yml
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;collections:
+  authors:
+	output: true
+
+defaults:
+  - scope:
+	  path: &quot;&quot;
+	  type: &quot;authors&quot;
+	values:
+	  layout: &quot;author&quot;
+  - scope:
+	  path: &quot;&quot;
+	  type: &quot;posts&quot;
+	values:
+	  layout: &quot;post&quot;
+  - scope:
+	  path: &quot;&quot;
+	values:
+	  layout: &quot;default&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;列举作者的博文&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _layouts/author.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: default
+---
+&amp;lt;h1&amp;gt;{ { page.name }}&amp;lt;/h1&amp;gt;
+&amp;lt;h2&amp;gt;{ { page.position }}&amp;lt;/h2&amp;gt;
+
+{ { content }}
+
+&amp;lt;h2&amp;gt;Posts&amp;lt;/h2&amp;gt;
+&amp;lt;ul&amp;gt;
+  { % assign filtered_posts = site.posts | where: 'author', page.short_name %}
+  { % for post in filtered_posts %}
+	&amp;lt;li&amp;gt;&amp;lt;a href=&quot;{ { post.url }}&quot;&amp;gt;{ { post.title }}&amp;lt;/a&amp;gt;&amp;lt;/li&amp;gt;
+  { % endfor %}
+&amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;超链接到作者信息页面&lt;/p&gt;
+
+&lt;p&gt;修改post模版&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim _layouts/post.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
+layout: default
+---
+&amp;lt;h1&amp;gt;{ { page.title }}&amp;lt;/h1&amp;gt;
+
+&amp;lt;p&amp;gt;
+  { { page.date | date_to_string }}
+  { % assign author = site.authors | where: 'short_name', page.author | first %}
+  { % if author %}
+	- &amp;lt;a href=&quot;{ { author.url }}&quot;&amp;gt;{ { author.name }}&amp;lt;/a&amp;gt;
+  { % endif %}
+&amp;lt;/p&amp;gt;
+
+{ { content }}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;http://localhost:4000 查看效果&lt;/p&gt;
+
+&lt;h2 id=&quot;develoyment&quot;&gt;Develoyment&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-介绍-6&quot;&gt;1. 介绍&lt;/h3&gt;
+
+&lt;p&gt;Gemfile 确保了Jekyll和其他gem的版本在不同的环境中保持一致。&lt;/p&gt;
+
+&lt;h3 id=&quot;2-上手操作-6&quot;&gt;2. 上手操作&lt;/h3&gt;
+
+&lt;p&gt;根目录下创建 Gemfile&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ vim Gemfile
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source 'https://rubygems.org'
+
+gem 'jekyll'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;安装gems 并创建 Gemfile.lock文件（锁定当前gem版本）&lt;/p&gt;
+
+&lt;p&gt;如果要更新gem版本，可以使用 bundle update命令&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle install
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;使用Gemfile文件，确保只使用 Gemfile里设置的gems&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec jekyll serve 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-官方插件&quot;&gt;3. 官方插件&lt;/h3&gt;
+
+&lt;p&gt;jekyll-sitemap 创建sitemap帮助搜索引擎索引内容, 在编译时创建sitemap&lt;/p&gt;
+
+&lt;p&gt;jekyll-feed 为您的文章创建一个RSS源需要在_layouts/defaut.html 的&lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;head&amp;gt;&lt;/code&gt;里添加标签{ % feed_meta %}&lt;/p&gt;
+
+&lt;p&gt;jekyll-seo-tag 添加元标签，以帮助搜索引擎优化需要在_layouts/defaut.html 的&amp;lt;head&amp;gt;里添加标签{ % seo %}&lt;/p&gt;
+
+&lt;p&gt;使用插件前需要加入到Gemfile&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;source 'https://rubygems.org'
+
+gem 'jekyll'
+
+group :jekyll_plugins do
+  gem 'jekyll-sitemap'
+  gem 'jekyll-feed'
+  gem 'jekyll-seo-tag'
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;并且在_config.yml配置&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4-上手操作&quot;&gt;4. 上手操作&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle update
+$ vim _layouts/defaut.html
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;!doctype html&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;meta&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;title&amp;gt;&lt;/span&gt;{ { page.title }}&lt;span class=&quot;nt&quot;&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;link&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;rel=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;stylesheet&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/assets/css/styles.css&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	{ % feed_meta %}
+	{ % seo %}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/head&amp;gt;&lt;/span&gt;
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+	{ % include navigation.html %}
+	{ { content }}
+  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>jill</name></author><summary type="html">Setup</summary></entry><entry><title type="html">Bananas</title><link href="http://localhost:4000/2019/08/09/bananas.html" rel="alternate" type="text/html" title="Bananas" /><published>2019-08-09T00:00:00+08:00</published><updated>2019-08-09T00:00:00+08:00</updated><id>http://localhost:4000/2019/08/09/bananas</id><content type="html" xml:base="http://localhost:4000/2019/08/09/bananas.html">&lt;p&gt;A banana is an edible fruit – botanically a berry – produced by several kinds
 of large herbaceous flowering plants in the genus Musa.&lt;/p&gt;
 
 &lt;p&gt;In some countries, bananas used for cooking may be called “plantains”,
