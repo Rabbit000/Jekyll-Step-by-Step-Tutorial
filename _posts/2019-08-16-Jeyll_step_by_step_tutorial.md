@@ -85,12 +85,12 @@ $ bundle exec jekyll serve
 
 > 如：(_去掉 \{ % 之间的空格_)
 
-```
-	{ % if page.show_sidebar % }
-	<div class="sidebar">
-		sidebar content
-	</div>
-	{ % endif % }
+```html
+{ % if page.show_sidebar %}
+<div class="sidebar">
+	sidebar content
+</div>
+{ % endif %}
 ```
 
 > 如果条件page.show_sidebar为true,输出条件语句之间的内容。
@@ -101,7 +101,7 @@ $ bundle exec jekyll serve
 >如：(_去掉大括号之间的空格_)
 
 ```
-	{ { "hi" | capitalize } }
+{ { "hi" | capitalize }}
 ```
 
 > 页面输出 Hi
@@ -115,10 +115,10 @@ $ bundle exec jekyll serve
 
 > Jekll识别Liquid需要在文件顶部加上front matter, 三短线标识
 
-```
-	…
-	<h1>{ { "Hello World!" | downcase } }</h1>
-	…
+```html
+…
+<h1>{ { "Hello World!" | downcase }}</h1>
+…
 ```
 
 ## Front Matter
@@ -126,29 +126,29 @@ $ bundle exec jekyll serve
 ### 1. Front matter 是YAML语言的一个片段，包含在两行三短划线之间。
 
 ```
-	---
-	my_number: 5 
-	---
+---
+my_number: 5 
+---
 ```
 	
 ### 2. 上手操作
 
-> 修改index.html
+> 修改index.html(去掉大括号之间的空格)
 	
-```
-	---
-	title: Home
-	---
-	<!doctype html>
-	<html>
-	  <head>
-	    <meta charset="utf-8">
-	    <title>{{ page.title }}</title>
-	  </head>
-	  <body>
-	    <h1>{{ "Hello World!" | downcase }}</h1>
-	  </body>
-	</html>
+```html
+---
+title: Home
+---
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{ { page.title }}</title>
+  </head>
+  <body>
+    <h1>{ { "Hello World!" | downcase }}</h1>
+  </body>
+</html>
 ```
 
 ## Layouts
@@ -167,15 +167,15 @@ Layouts模版 放置在 _layouts目录下
 
 创建_layouts/default.html(_去掉大括号之间的空格_)
 
-```
+```html
 <!doctype html>
 <html>
   <head>
 	<meta charset="utf-8">
-	<title>{ { page.title } }</title>
+	<title>{ { page.title }}</title>
   </head>
   <body>
-	{ { content } }
+	{ { content }}
   </body>
 </html>
 ```
@@ -223,7 +223,7 @@ include 的作用是从_includes目录下的文件中引入其内容
 ### 2. 上手操作
 创建导航文件 _includes/navigation.html
 
-```
+```html
 $ mkdir _includes
 $ vim _includes/navigation.html
 <nav>
@@ -234,13 +234,13 @@ $ vim _includes/navigation.html
 
 将导航文件引入到`_layouts/default.html`模版文件中(_去掉大括号之间的空格_)
 
-```
+```html
 $ vim _layouts/default.html
 <!doctype html>
 <html>
   <head>
 	<meta charset="utf-8">
-	<title>{{ page.title }}</title>
+	<title>{ { page.title }}</title>
   </head>
   <body>
 	{ % include navigation.html %}
@@ -260,7 +260,7 @@ $ vim _layouts/default.html
 page.url 是当前页面的相对路径
 
 修改导航文件 navigation.html (_去掉{ %之间的空格_)
-```
+```html
 $ vim _includes/navigation.html
 <nav>
   <a href="/" { % if page.url == "/" %}style="color: red;"{ % endif %}>
@@ -296,7 +296,7 @@ $ vim _data/navigation.yml
 	
 通过 site.data.navigation 存储导航内容，通过变量指代的方式引用其数据。(_去掉{ %之间的空格_)
 
-```
+```html
 $ vim _includes/navigation.html
 <nav>
   { % for item in site.data.navigation %}
@@ -340,7 +340,7 @@ $ cmd //c tree //F
 
 使用 Sass 来显示样式
 
-```
+```html
 $ vim _includes/navigation.html
 <nav>
   { % for item in site.data.navigation %}
@@ -454,7 +454,7 @@ md文件需要有front matter ，layout 及其他非必须变量（title, author
 $ vim _layouts/post.html
 ```
 
-```
+```html
 ---
 layout: default
 ---
@@ -476,7 +476,7 @@ site.posts 存储post文件
 $ vim blog.html
 ```
 
-```	
+```html	
 ---
 layout: default
 title: Blog
@@ -557,7 +557,10 @@ texture, with a sweet and unique flavor.
 > 1. layout: <layout_file_name> 冒号和文件名之间必须要有个空格，否则不生效
 > 2. 文章的内容编码要是UTF-8格式，否则报invalid byte sequence in UTF-8
 > 3. 由于之前Git Bash中文乱码问题，设置Git Bash为GBK格式，所以复制内容时-的格式不正确。
+> 4. 强烈建议将Windows10的编码设置为utf-8（需要重启电脑）。
 
+![Windows10 utf-8](/assets/images/win10_utf-8.png "Windows10 utf-8")
+	
 	
 ## Collections
 
@@ -625,7 +628,7 @@ Ted has been eating fruit since he was baby.
 $ vim staff.html
 ```
 
-```	
+```html
 ---
 layout: default
 title: Staff
@@ -677,7 +680,7 @@ collections:
 $ vim staff.html
 ```
 
-```
+```html
 ---
 layout: default
 ---
@@ -699,7 +702,7 @@ layout: default
 $ vim _layouts/author.html
 ```
 
-```
+```html
 ---
 layout: default
 ---
@@ -747,7 +750,7 @@ defaults:
 $ vim _layouts/author.html
 ```
 
-```
+```html
 ---
 layout: default
 ---
@@ -773,7 +776,7 @@ layout: default
 $ vim _layouts/post.html
 ```
 
-```	
+```html
 ---
 layout: default
 ---
@@ -863,7 +866,7 @@ $ bundle update
 $ vim _layouts/defaut.html
 ```
 
-```
+```html
 <!doctype html>
 <html>
   <head>
@@ -880,5 +883,7 @@ $ vim _layouts/defaut.html
 </html>
 ```
 
+## Jekyll 网站架构说明
+![jekyll architecture](/assets/images/jekyll-architecture.png "jekyll architecture")
 
 
